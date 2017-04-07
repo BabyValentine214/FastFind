@@ -10,6 +10,7 @@ will ultimately route to the right search url.  Once i get the string, then i ca
 //first, before opening a url, let's simply print stuff out. 
 var strength;
 var lens;
+var gender;
 var searchURL;
 function getStrength(){
 strength = document.getElementById("target1").value;
@@ -19,7 +20,10 @@ function getLens(){
  lens = document.getElementById("target2").value;
 document.getElementById("demo").innerHTML = lens;
 }
-
+function getGender(){
+gender = document.getElementById("target3").value;
+document.getElementById("demo3").innerHTML = gender;
+}
 function goToNewPage() {
 var searchURL = (`http:\/\/www.debspecs.com/all-products.html?lens=${lens}&power_new=${strength}`); //WORKED! HERE IS THE URL!
 document.getElementById("demo3").innerHTML = searchURL;
@@ -62,7 +66,7 @@ Strength<form>
 				
                 </select></form></div><!--helpworkchrome1-->
 	<form>
-		<select id="gender">
+		<select id="target3" onchange="getGender()">
 			<option>Any</option>
 			<option value="43">Female</option>
 			<option value="44">Male</option>
@@ -86,6 +90,7 @@ Strength<form>
  </div><!--helpWorkChrome2-->
   Lens<p id = "demo"></p>
    Strength <p id = "demo2"></p>
+	Gender<p id = "demo3"></p>
 	<p id = "demo3">url</p>
   
 
