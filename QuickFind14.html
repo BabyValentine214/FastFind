@@ -28,7 +28,7 @@ function goToNewPage() {
 var searchURL = (`http:\/\/www.debspecs.com/all-products.html?gender=${gender}&lens=${lens}&power_new=${strength}`); //WORKED! HERE IS THE URL!
 document.getElementById("demo3").innerHTML = searchURL;
 
-                 window.location.href = searchURL;
+                 window.location.href = searchURL; 
                    
                     }//end function
 </script>
@@ -67,7 +67,7 @@ Strength<form>
                 </select></form></div><!--helpworkchrome1-->
 	<form>
 		<select id="target3" onchange="getGender()">
-			
+			<option>Gender</option>
 			<option value="43">Female</option>
 			<option value="44">Male</option>
 		</select>
